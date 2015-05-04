@@ -23,8 +23,8 @@
 *.cd	wintext
 
 # Sources (Managed)
-*.cs	wintext
-*.vb	wintext
+#*.cs	wintext
+#*.vb	wintext
 *.resx	wintext
 *.xaml	wintext
 *.config	wintext
