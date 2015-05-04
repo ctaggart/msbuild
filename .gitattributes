@@ -2,7 +2,7 @@
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
 
-[attr]wintext text eol=crlf
+[attr]wintext eol=crlf
 
 * text=auto
 
