@@ -7,7 +7,7 @@
 * text=auto
 
 # Default
-*.* wintext
+#*.* wintext
 
 # Build Specifications
 *.sln	wintext
