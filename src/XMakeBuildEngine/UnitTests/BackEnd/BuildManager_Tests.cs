@@ -706,7 +706,7 @@ namespace Microsoft.Build.UnitTests.BackEnd
 <UsingTask TaskName='VerifyGlobalProjectCollection' TaskFactory='CodeTaskFactory' AssemblyFile='$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll'>
                         <Task>
                             <Using Namespace='Microsoft.Build.Evaluation'/>
-                               <Reference Include='$(MSBuildToolsPath)\Microsoft.Build.dll'/>
+                               <Reference Include='$(MSBuildToolsPath)\SourceLink.Build.dll'/>
 <Code Type='Method'>
  <![CDATA[
                     

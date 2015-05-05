@@ -44,7 +44,7 @@ namespace Microsoft.Build.UnitTests.Definition
             ToolsetConfigurationReaderTestHelper.WriteConfigFile(ObjectModelHelpers.CleanupFileContents(@"
                  <configuration>
                    <configSections>
-                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, Microsoft.Build"" />
+                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, SourceLink.Build"" />
                    </configSections>
                    <msbuildToolsets />
                  </configuration>"));
@@ -68,7 +68,7 @@ namespace Microsoft.Build.UnitTests.Definition
             ToolsetConfigurationReaderTestHelper.WriteConfigFile(ObjectModelHelpers.CleanupFileContents(@"
                  <configuration>
                    <configSections>
-                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, Microsoft.Build"" />
+                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, SourceLink.Build"" />
                    </configSections>
                    <msbuildToolsets default=""2.0"">
                      <toolset toolsVersion=""2.0"">
@@ -101,7 +101,7 @@ namespace Microsoft.Build.UnitTests.Definition
             ToolsetConfigurationReaderTestHelper.WriteConfigFile(ObjectModelHelpers.CleanupFileContents(@"
                  <configuration>
                    <configSections>
-                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, Microsoft.Build"" />
+                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, SourceLink.Build"" />
                    </configSections>
                    <msbuildToolsets default=""2.0"" msbuildOverrideTasksPath=""c:\foo"">
                      <toolset toolsVersion=""2.0"">
@@ -127,7 +127,7 @@ namespace Microsoft.Build.UnitTests.Definition
             ToolsetConfigurationReaderTestHelper.WriteConfigFile(ObjectModelHelpers.CleanupFileContents(@"
                  <configuration>
                    <configSections>
-                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, Microsoft.Build"" />
+                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, SourceLink.Build"" />
                    </configSections>
                    <msbuildToolsets default=""2.0"" msbuildOverrideTasksPath="""">
                      <toolset toolsVersion=""2.0"">
@@ -155,7 +155,7 @@ namespace Microsoft.Build.UnitTests.Definition
             ToolsetConfigurationReaderTestHelper.WriteConfigFile(ObjectModelHelpers.CleanupFileContents(@"
                  <configuration>
                    <configSections>
-                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, Microsoft.Build"" />
+                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, SourceLink.Build"" />
                    </configSections>
                     <startup>
                      <supportedRuntime imageVersion=""v2.0.60510"" version=""v2.0.x86chk""/>
@@ -203,7 +203,7 @@ namespace Microsoft.Build.UnitTests.Definition
             ToolsetConfigurationReaderTestHelper.WriteConfigFile(ObjectModelHelpers.CleanupFileContents(@"
                  <configuration>
                    <configSections>
-                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, Microsoft.Build"" />
+                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, SourceLink.Build"" />
                    </configSections>
                    <msbuildToolsets default=""2.0"">
                      <toolset>
@@ -230,7 +230,7 @@ namespace Microsoft.Build.UnitTests.Definition
             ToolsetConfigurationReaderTestHelper.WriteConfigFile(ObjectModelHelpers.CleanupFileContents(@"
                  <configuration>
                    <configSections>
-                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, Microsoft.Build"" />
+                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, SourceLink.Build"" />
                    </configSections>
                    <msbuildToolsets default=""2.0"">
                      <toolset toolsVersion=""2.0"">
@@ -257,7 +257,7 @@ namespace Microsoft.Build.UnitTests.Definition
             ToolsetConfigurationReaderTestHelper.WriteConfigFile(ObjectModelHelpers.CleanupFileContents(@"
                  <configuration>
                    <configSections>
-                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, Microsoft.Build"" />
+                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, SourceLink.Build"" />
                    </configSections>
                    <msbuildToolsets default=""2.0"">
                      <toolset />
@@ -285,7 +285,7 @@ namespace Microsoft.Build.UnitTests.Definition
             ToolsetConfigurationReaderTestHelper.WriteConfigFile(ObjectModelHelpers.CleanupFileContents(@"
                  <configuration>
                    <configSections>
-                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, Microsoft.Build"" />
+                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, SourceLink.Build"" />
                    </configSections>
                    <msbuildToolsets default=""4.0"">
                      <toolset toolsVersion=""4.0"">
@@ -322,7 +322,7 @@ namespace Microsoft.Build.UnitTests.Definition
             ToolsetConfigurationReaderTestHelper.WriteConfigFile(ObjectModelHelpers.CleanupFileContents(@"
                  <configuration>
                    <configSections>
-                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, Microsoft.Build"" />
+                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, SourceLink.Build"" />
                    </configSections>
                    <msbuildToolsets default=""4.0"">
                      <toolset toolsVersion=""4.0"">
@@ -346,7 +346,7 @@ namespace Microsoft.Build.UnitTests.Definition
             ToolsetConfigurationReaderTestHelper.WriteConfigFile(ObjectModelHelpers.CleanupFileContents(@"
                  <configuration>
                    <configSections>
-                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, Microsoft.Build"" />
+                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, SourceLink.Build"" />
                    </configSections>
                    <msbuildToolsets default=""4.0"">
                      <toolset name=""4.0"">
@@ -370,7 +370,7 @@ namespace Microsoft.Build.UnitTests.Definition
             ToolsetConfigurationReaderTestHelper.WriteConfigFile(ObjectModelHelpers.CleanupFileContents(@"
                  <configuration>
                    <configSections>
-                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, Microsoft.Build"" />
+                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, SourceLink.Build"" />
                    </configSections>
                    <msbuildToolsets default=""4.0"">
                      <toolset ToolsVersion=""msbuilddefaulttoolsversion"">
@@ -395,7 +395,7 @@ namespace Microsoft.Build.UnitTests.Definition
             ToolsetConfigurationReaderTestHelper.WriteConfigFile(ObjectModelHelpers.CleanupFileContents(@"
                  <configuration>
                    <configSections>
-                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, Microsoft.Build"" />
+                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, SourceLink.Build"" />
                    </configSections>
                    <msbuildToolsets default=""4.0"">
                      <toolset toolsVersion=""4.0"">
@@ -422,7 +422,7 @@ namespace Microsoft.Build.UnitTests.Definition
             ToolsetConfigurationReaderTestHelper.WriteConfigFile(ObjectModelHelpers.CleanupFileContents(@"
                  <configuration>
                    <configSections>
-                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, Microsoft.Build"" />
+                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, SourceLink.Build"" />
                    </configSections>
                    <msbuildToolsets default=""2.0"">
                      <toolset toolsVersion=""2.0"">
@@ -455,7 +455,7 @@ namespace Microsoft.Build.UnitTests.Definition
             ToolsetConfigurationReaderTestHelper.WriteConfigFile(ObjectModelHelpers.CleanupFileContents(@"
                  <configuration>
                    <configSections>
-                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, Microsoft.Build"" />
+                     <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, SourceLink.Build"" />
                    </configSections>
                    <msbuildToolsets default=""2.0"">
                      <toolset toolsVersion=""2.0"">

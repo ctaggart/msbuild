@@ -138,7 +138,7 @@ namespace Microsoft.Build.Tasks
                     new string[]
                     {
                         "System.dll",
-                        Path.Combine(pathToMSBuildBinaries, "Microsoft.Build.Framework.dll"),
+                        Path.Combine(pathToMSBuildBinaries, "SourceLink.Build.Framework.dll"),
                         Path.Combine(pathToMSBuildBinaries, "Microsoft.Build.Utilities.Core.dll"),
                         Path.Combine(pathToMSBuildBinaries, "Microsoft.Build.Tasks.Core.dll")
                     }

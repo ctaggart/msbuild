@@ -571,7 +571,7 @@ namespace Microsoft.Build.UnitTests
                 string configContent = @"<?xml version =""1.0""?>
                                             <configuration>
                                                 <configSections>
-                                                    <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, Microsoft.Build, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"" />
+                                                    <section name=""msbuildToolsets"" type=""Microsoft.Build.Evaluation.ToolsetConfigurationSection, SourceLink.Build, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"" />
                                                     <foo/>
                                                 </configSections>
                                                 <startup>
@@ -772,11 +772,11 @@ namespace Microsoft.Build.UnitTests
                 }
                 //Should pass
                 Assert.AreEqual(MSBuildApp.ExitType.Success,
-                    MSBuildApp.Execute(@"c:\bin\msbuild.exe /logger:FileLogger,""Microsoft.Build, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"" " + quotedProjectFileName));
+                    MSBuildApp.Execute(@"c:\bin\msbuild.exe /logger:FileLogger,""SourceLink.Build, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"" " + quotedProjectFileName));
 
                 //Should fail as we are not changing existing lines
                 Assert.AreEqual(MSBuildApp.ExitType.InitializationError,
-                        MSBuildApp.Execute(@"c:\bin\msbuild.exe /logger:FileLogger,Microsoft.Build,Version=11111 " + quotedProjectFileName));
+                        MSBuildApp.Execute(@"c:\bin\msbuild.exe /logger:FileLogger,SourceLink.Build,Version=11111 " + quotedProjectFileName));
             }
             finally
             {

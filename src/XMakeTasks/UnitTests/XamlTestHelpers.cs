@@ -21,7 +21,7 @@ namespace Microsoft.Build.UnitTests
     {
         // the following are used for the tests in XamlTaskFactory_Tests.cs and XamlDataDrivenToolTask_Tests.cs
         // make as robust as possible
-        private const string fakeXml = @"<ProjectSchemaDefinitions xmlns=`clr-namespace:Microsoft.Build.Framework.XamlTypes;assembly=Microsoft.Build.Framework` xmlns:x=`http://schemas.microsoft.com/winfx/2006/xaml` xmlns:sys=`clr-namespace:System;assembly=mscorlib` xmlns:impl=`clr-namespace:Microsoft.VisualStudio.Project.Contracts.Implementation;assembly=Microsoft.VisualStudio.Project.Contracts.Implementation`>
+        private const string fakeXml = @"<ProjectSchemaDefinitions xmlns=`clr-namespace:Microsoft.Build.Framework.XamlTypes;assembly=SourceLink.Build.Framework` xmlns:x=`http://schemas.microsoft.com/winfx/2006/xaml` xmlns:sys=`clr-namespace:System;assembly=mscorlib` xmlns:impl=`clr-namespace:Microsoft.VisualStudio.Project.Contracts.Implementation;assembly=Microsoft.VisualStudio.Project.Contracts.Implementation`>
                                             <Rule Name=`FakeTask`>
                                               <BoolProperty Name=`Always` Switch=`/always` />
 
@@ -64,7 +64,7 @@ namespace Microsoft.Build.UnitTests
                                          </ProjectSchemaDefinitions>
                                             ";
 
-        public const string QuotingQuotesXml = @"<ProjectSchemaDefinitions xmlns=`clr-namespace:Microsoft.Build.Framework.XamlTypes;assembly=Microsoft.Build.Framework` xmlns:x=`http://schemas.microsoft.com/winfx/2006/xaml` xmlns:sys=`clr-namespace:System;assembly=mscorlib` xmlns:impl=`clr-namespace:Microsoft.VisualStudio.Project.Contracts.Implementation;assembly=Microsoft.VisualStudio.Project.Contracts.Implementation`>
+        public const string QuotingQuotesXml = @"<ProjectSchemaDefinitions xmlns=`clr-namespace:Microsoft.Build.Framework.XamlTypes;assembly=SourceLink.Build.Framework` xmlns:x=`http://schemas.microsoft.com/winfx/2006/xaml` xmlns:sys=`clr-namespace:System;assembly=mscorlib` xmlns:impl=`clr-namespace:Microsoft.VisualStudio.Project.Contracts.Implementation;assembly=Microsoft.VisualStudio.Project.Contracts.Implementation`>
                                             <Rule Name=`FakeTask`>
                                               <!-- Quoted: If the quote mechanism isn't working, all the tests will fail with exceptions related to compiling. -->
                                               <EnumProperty Name=`Quoted`>
@@ -75,7 +75,7 @@ namespace Microsoft.Build.UnitTests
                                          </ProjectSchemaDefinitions>
                                             ";
 
-        public const string QuotingBackslashXml = @"<ProjectSchemaDefinitions xmlns=`clr-namespace:Microsoft.Build.Framework.XamlTypes;assembly=Microsoft.Build.Framework` xmlns:x=`http://schemas.microsoft.com/winfx/2006/xaml` xmlns:sys=`clr-namespace:System;assembly=mscorlib` xmlns:impl=`clr-namespace:Microsoft.VisualStudio.Project.Contracts.Implementation;assembly=Microsoft.VisualStudio.Project.Contracts.Implementation`>
+        public const string QuotingBackslashXml = @"<ProjectSchemaDefinitions xmlns=`clr-namespace:Microsoft.Build.Framework.XamlTypes;assembly=SourceLink.Build.Framework` xmlns:x=`http://schemas.microsoft.com/winfx/2006/xaml` xmlns:sys=`clr-namespace:System;assembly=mscorlib` xmlns:impl=`clr-namespace:Microsoft.VisualStudio.Project.Contracts.Implementation;assembly=Microsoft.VisualStudio.Project.Contracts.Implementation`>
                                             <Rule Name=`FakeTask`>
                                               <!-- Quoted: If the quote mechanism isn't working, all the tests will fail with exceptions related to compiling. -->
                                               <EnumProperty Name=`Quoted`>
@@ -143,7 +143,7 @@ namespace Microsoft.Build.UnitTests
                 cp.ReferencedAssemblies.Add("System.dll");
                 cp.ReferencedAssemblies.Add("System.Data.dll");
                 cp.ReferencedAssemblies.Add("System.XML.dll");
-                cp.ReferencedAssemblies.Add(Path.Combine(PathToMSBuildBinaries, "Microsoft.Build.Framework.dll"));
+                cp.ReferencedAssemblies.Add(Path.Combine(PathToMSBuildBinaries, "SourceLink.Build.Framework.dll"));
                 cp.ReferencedAssemblies.Add(Path.Combine(PathToMSBuildBinaries, "Microsoft.Build.Utilities.Core.dll"));
                 cp.ReferencedAssemblies.Add(Path.Combine(PathToMSBuildBinaries, "Microsoft.Build.Tasks.Core.dll"));
 

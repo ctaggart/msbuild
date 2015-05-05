@@ -627,7 +627,7 @@ namespace ItemCreationTask
                 referenceAssembliesPath = ToolLocationHelper.GetPathToDotNetFramework(TargetDotNetFrameworkVersion.VersionLatest);
             }
 
-            string[] referenceAssemblies = new string[] { Path.Combine(referenceAssembliesPath, "System.dll"), Path.Combine(referenceAssembliesPath, "Microsoft.Build.Framework.dll"), Path.Combine(referenceAssembliesPath, "Microsoft.Build.Utilities.v4.0.dll") };
+            string[] referenceAssemblies = new string[] { Path.Combine(referenceAssembliesPath, "System.dll"), Path.Combine(referenceAssembliesPath, "SourceLink.Build.Framework.dll"), Path.Combine(referenceAssembliesPath, "Microsoft.Build.Utilities.v4.0.dll") };
 
             string customTaskPath = CustomTaskHelper.GetAssemblyForTask(s_nullMetadataTaskContents, referenceAssemblies);
 
@@ -759,7 +759,7 @@ namespace ItemCreationTask
                 referenceAssembliesPath = ToolLocationHelper.GetPathToDotNetFramework(TargetDotNetFrameworkVersion.VersionLatest);
             }
 
-            string[] referenceAssemblies = new string[] { Path.Combine(referenceAssembliesPath, "System.dll"), Path.Combine(referenceAssembliesPath, "Microsoft.Build.Framework.dll"), Path.Combine(referenceAssembliesPath, "Microsoft.Build.Utilities.v4.0.dll") };
+            string[] referenceAssemblies = new string[] { Path.Combine(referenceAssembliesPath, "System.dll"), Path.Combine(referenceAssembliesPath, "SourceLink.Build.Framework.dll"), Path.Combine(referenceAssembliesPath, "Microsoft.Build.Utilities.v4.0.dll") };
 
             string customTaskPath = CustomTaskHelper.GetAssemblyForTask(s_itemCreationTaskContents, referenceAssemblies);
             ValidateDefiningProjectMetadataOnTaskOutputsHelper(customTaskPath);

@@ -50,7 +50,7 @@ namespace Microsoft.Build.UnitTests.ResolveAssemblyReference_Tests
   <File AssemblyName=""Accessibility"" Version=""4.0.0.0"" PublicKeyToken=""b03f5f7f11d50a3a"" Culture=""neutral"" ProcessorArchitecture=""MSIL"" InGac=""true"" />
   <File AssemblyName=""CustomMarshalers"" Version=""4.0.0.0"" PublicKeyToken=""b03f5f7f11d50a3a"" Culture=""neutral"" ProcessorArchitecture=""MSIL"" InGac=""true"" />
   <File AssemblyName=""ISymWrapper"" Version=""4.0.0.0"" PublicKeyToken=""b03f5f7f11d50a3a"" Culture=""neutral"" ProcessorArchitecture=""MSIL"" InGac=""true"" />
-  <File AssemblyName=""Microsoft.Build"" Version=""4.0.0.0"" PublicKeyToken=""b03f5f7f11d50a3a"" Culture=""neutral"" ProcessorArchitecture=""MSIL"" InGac=""true"" />
+  <File AssemblyName=""SourceLink.Build"" Version=""4.0.0.0"" PublicKeyToken=""b03f5f7f11d50a3a"" Culture=""neutral"" ProcessorArchitecture=""MSIL"" InGac=""true"" />
   <File AssemblyName=""Microsoft.Build.Conversion.v4.0"" Version=""4.0.0.0"" PublicKeyToken=""b03f5f7f11d50a3a"" Culture=""neutral"" ProcessorArchitecture=""MSIL"" InGac=""true"" />
   <File AssemblyName=""Microsoft.Build.Engine"" Version=""4.0.0.0"" PublicKeyToken=""b03f5f7f11d50a3a"" Culture=""neutral"" ProcessorArchitecture=""MSIL"" InGac=""true"" />
   <File AssemblyName=""Microsoft.Build.Framework"" Version=""4.0.0.0"" PublicKeyToken=""b03f5f7f11d50a3a"" Culture=""neutral"" ProcessorArchitecture=""MSIL"" InGac=""true"" />
@@ -1377,7 +1377,7 @@ namespace Microsoft.Build.UnitTests.ResolveAssemblyReference_Tests
 
             if (String.Compare(path, @"c:\MyComponents\Microsoft.Build.dll", StringComparison.OrdinalIgnoreCase) == 0)
             {
-                return new AssemblyNameExtension("Microsoft.Build, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
+                return new AssemblyNameExtension("SourceLink.Build, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
             }
 
             if (String.Compare(path, @"c:\MyComponents\DependsOnMSBuild12.dll", StringComparison.OrdinalIgnoreCase) == 0)
@@ -2229,7 +2229,7 @@ namespace Microsoft.Build.UnitTests.ResolveAssemblyReference_Tests
             {
                 return new AssemblyNameExtension[]
                 {
-                    new AssemblyNameExtension("Microsoft.Build, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")
+                    new AssemblyNameExtension("SourceLink.Build, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")
                 };
             }
 
@@ -5974,7 +5974,7 @@ namespace Microsoft.Build.UnitTests.ResolveAssemblyReference_Tests
             };
 
             string redistString = "<FileList Redist='Microsoft-Windows-CLRCoreComp-Random' >" +
-                                      "<File AssemblyName='Microsoft.Build' Version='4.0.0.0' PublicKeyToken='b03f5f7f11d50a3a' Culture='neutral' ProcessorArchitecture='MSIL' FileVersion='4.0.0.0' InGAC='true' />" +
+                                      "<File AssemblyName='SourceLink.Build' Version='4.0.0.0' PublicKeyToken='b03f5f7f11d50a3a' Culture='neutral' ProcessorArchitecture='MSIL' FileVersion='4.0.0.0' InGAC='true' />" +
                                   "</FileList >";
 
             ResolveAssemblyReference t1 = new ResolveAssemblyReference();
@@ -5983,7 +5983,7 @@ namespace Microsoft.Build.UnitTests.ResolveAssemblyReference_Tests
             ExecuteRAROnItemsAndRedist(t1, e, items, redistString, false);
 
             Assert.IsTrue(e.Warnings == 0, "Expected successful resolution with no warnings.");
-            e.AssertLogContains("Microsoft.Build.dll");
+            e.AssertLogContains("SourceLink.Build.dll");
             Assert.AreEqual(1, t1.ResolvedFiles.Length);
 
             ResolveAssemblyReference t2 = new ResolveAssemblyReference();
@@ -5992,7 +5992,7 @@ namespace Microsoft.Build.UnitTests.ResolveAssemblyReference_Tests
             ExecuteRAROnItemsAndRedist(t2, e, items, redistString, false);
 
             Assert.IsTrue(e.Warnings == 1, "Expected one warning in this scenario.");
-            e.AssertLogContains("Microsoft.Build.dll");
+            e.AssertLogContains("SourceLink.Build.dll");
             Assert.AreEqual(0, t2.ResolvedFiles.Length);
 
             ResolveAssemblyReference t3 = new ResolveAssemblyReference();
@@ -6002,7 +6002,7 @@ namespace Microsoft.Build.UnitTests.ResolveAssemblyReference_Tests
             ExecuteRAROnItemsAndRedist(t3, e, items, redistString, false);
 
             Assert.IsTrue(e.Warnings == 1, "Expected one warning in this scenario.");
-            e.AssertLogContains("Microsoft.Build.dll");
+            e.AssertLogContains("SourceLink.Build.dll");
             Assert.AreEqual(1, t1.ResolvedFiles.Length);
         }
 
@@ -6106,7 +6106,7 @@ namespace Microsoft.Build.UnitTests.ResolveAssemblyReference_Tests
             };
 
             string redistString = "<FileList Redist='Microsoft-Windows-CLRCoreComp-Random' >" +
-                                      "<File AssemblyName='Microsoft.Build' Version='4.0.0.0' PublicKeyToken='b03f5f7f11d50a3a' Culture='neutral' ProcessorArchitecture='MSIL' FileVersion='4.0.0.0' InGAC='true' />" +
+                                      "<File AssemblyName='SourceLink.Build' Version='4.0.0.0' PublicKeyToken='b03f5f7f11d50a3a' Culture='neutral' ProcessorArchitecture='MSIL' FileVersion='4.0.0.0' InGAC='true' />" +
                                   "</FileList >";
 
             ResolveAssemblyReference t1 = new ResolveAssemblyReference();
@@ -6116,7 +6116,7 @@ namespace Microsoft.Build.UnitTests.ResolveAssemblyReference_Tests
 
             Assert.IsTrue(e.Warnings == 0, "Expected successful resolution with no warnings.");
             e.AssertLogContains("DependsOnMSBuild12");
-            e.AssertLogContains("Microsoft.Build.dll");
+            e.AssertLogContains("SourceLink.Build.dll");
             Assert.AreEqual(1, t1.ResolvedFiles.Length);
 
             ResolveAssemblyReference t2 = new ResolveAssemblyReference();
@@ -6126,7 +6126,7 @@ namespace Microsoft.Build.UnitTests.ResolveAssemblyReference_Tests
 
             Assert.IsTrue(e.Warnings == 1, "Expected one warning in this scenario");
             e.AssertLogContains("DependsOnMSBuild12");
-            e.AssertLogContains("Microsoft.Build.dll");
+            e.AssertLogContains("SourceLink.Build.dll");
             Assert.AreEqual(0, t2.ResolvedFiles.Length);
 
             ResolveAssemblyReference t3 = new ResolveAssemblyReference();
@@ -6136,7 +6136,7 @@ namespace Microsoft.Build.UnitTests.ResolveAssemblyReference_Tests
 
             Assert.IsTrue(e.Warnings == 1, "Expected one warning in this scenario");
             e.AssertLogContains("DependsOnMSBuild12");
-            e.AssertLogContains("Microsoft.Build.dll");
+            e.AssertLogContains("SourceLink.Build.dll");
             Assert.AreEqual(0, t3.ResolvedFiles.Length);
         }
 
