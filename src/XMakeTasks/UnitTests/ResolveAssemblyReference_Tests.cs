@@ -5964,6 +5964,8 @@ namespace Microsoft.Build.UnitTests.ResolveAssemblyReference_Tests
         /// not warn -- this is a hack until we figure out how to properly deal with .NET assemblies being removed from the framework.
         /// </summary>
         [TestMethod]
+        [Ignore]
+        // Ignore: SourceLink.Build assemblies not shipped with the .NET Framework like Micorosft.Build .
         public void HigherThanHighestInRedistListForMSBuildAssembly()
         {
             MockEngine e = new MockEngine();
@@ -5974,7 +5976,7 @@ namespace Microsoft.Build.UnitTests.ResolveAssemblyReference_Tests
             };
 
             string redistString = "<FileList Redist='Microsoft-Windows-CLRCoreComp-Random' >" +
-                                      "<File AssemblyName='SourceLink.Build' Version='4.0.0.0' PublicKeyToken='b03f5f7f11d50a3a' Culture='neutral' ProcessorArchitecture='MSIL' FileVersion='4.0.0.0' InGAC='true' />" +
+                                      "<File AssemblyName='Microsoft.Build' Version='4.0.0.0' PublicKeyToken='b03f5f7f11d50a3a' Culture='neutral' ProcessorArchitecture='MSIL' FileVersion='4.0.0.0' InGAC='true' />" +
                                   "</FileList >";
 
             ResolveAssemblyReference t1 = new ResolveAssemblyReference();
@@ -5983,7 +5985,7 @@ namespace Microsoft.Build.UnitTests.ResolveAssemblyReference_Tests
             ExecuteRAROnItemsAndRedist(t1, e, items, redistString, false);
 
             Assert.IsTrue(e.Warnings == 0, "Expected successful resolution with no warnings.");
-            e.AssertLogContains("SourceLink.Build.dll");
+            e.AssertLogContains("Microsoft.Build.dll");
             Assert.AreEqual(1, t1.ResolvedFiles.Length);
 
             ResolveAssemblyReference t2 = new ResolveAssemblyReference();
@@ -5992,7 +5994,7 @@ namespace Microsoft.Build.UnitTests.ResolveAssemblyReference_Tests
             ExecuteRAROnItemsAndRedist(t2, e, items, redistString, false);
 
             Assert.IsTrue(e.Warnings == 1, "Expected one warning in this scenario.");
-            e.AssertLogContains("SourceLink.Build.dll");
+            e.AssertLogContains("Microsoft.Build.dll");
             Assert.AreEqual(0, t2.ResolvedFiles.Length);
 
             ResolveAssemblyReference t3 = new ResolveAssemblyReference();
@@ -6002,7 +6004,7 @@ namespace Microsoft.Build.UnitTests.ResolveAssemblyReference_Tests
             ExecuteRAROnItemsAndRedist(t3, e, items, redistString, false);
 
             Assert.IsTrue(e.Warnings == 1, "Expected one warning in this scenario.");
-            e.AssertLogContains("SourceLink.Build.dll");
+            e.AssertLogContains("Microsoft.Build.dll");
             Assert.AreEqual(1, t1.ResolvedFiles.Length);
         }
 
