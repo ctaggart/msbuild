@@ -139,7 +139,7 @@ namespace Microsoft.Build.Tasks
                     {
                         "System.dll",
                         Path.Combine(pathToMSBuildBinaries, "SourceLink.Build.Framework.dll"),
-                        Path.Combine(pathToMSBuildBinaries, "Microsoft.Build.Utilities.Core.dll"),
+                        Path.Combine(pathToMSBuildBinaries, "SourceLink.Build.Utilities.Core.dll"),
                         Path.Combine(pathToMSBuildBinaries, "Microsoft.Build.Tasks.Core.dll")
                     }
 

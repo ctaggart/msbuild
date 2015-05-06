@@ -340,9 +340,9 @@ namespace Microsoft.Build.Internal
                     s_availableStaticMethods.TryAdd("System.UriBuilder", new Tuple<string, Type>(null, typeof(System.UriBuilder)));
                     s_availableStaticMethods.TryAdd("System.Version", new Tuple<string, Type>(null, typeof(System.Version)));
 #if (!STANDALONEBUILD)
-                    availableStaticMethods.TryAdd("Microsoft.Build.Utilities.ToolLocationHelper", new Tuple<string, Type>("Microsoft.Build.Utilities.ToolLocationHelper, Microsoft.Build.Utilities.Core, Version=" + MSBuildConstants.CurrentAssemblyVersion + ", Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", null));
+                    availableStaticMethods.TryAdd("Microsoft.Build.Utilities.ToolLocationHelper", new Tuple<string, Type>("Microsoft.Build.Utilities.ToolLocationHelper, SourceLink.Build.Utilities.Core, Version=" + MSBuildConstants.CurrentAssemblyVersion + ", Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", null));
 #else
-                    s_availableStaticMethods.TryAdd("Microsoft.Build.Utilities.ToolLocationHelper", new Tuple<string, Type>("Microsoft.Build.Utilities.ToolLocationHelper, Microsoft.Build.Utilities.Core, Version=" + MSBuildConstants.CurrentAssemblyVersion, null));
+                    s_availableStaticMethods.TryAdd("Microsoft.Build.Utilities.ToolLocationHelper", new Tuple<string, Type>("Microsoft.Build.Utilities.ToolLocationHelper, SourceLink.Build.Utilities.Core, Version=" + MSBuildConstants.CurrentAssemblyVersion, null));
 #endif
                 }
             }

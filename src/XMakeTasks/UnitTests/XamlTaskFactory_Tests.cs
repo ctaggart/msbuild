@@ -435,7 +435,7 @@ namespace Microsoft.Build.UnitTests.XamlTaskFactory_Tests
                 // Add an assembly reference.
                 cp.ReferencedAssemblies.Add("System.dll");
                 cp.ReferencedAssemblies.Add("System.XML.dll");
-                cp.ReferencedAssemblies.Add(Path.Combine(XamlTestHelpers.PathToMSBuildBinaries, "microsoft.build.utilities.core.dll"));
+                cp.ReferencedAssemblies.Add(Path.Combine(XamlTestHelpers.PathToMSBuildBinaries, "sourcelink.build.utilities.core.dll"));
                 cp.ReferencedAssemblies.Add(Path.Combine(XamlTestHelpers.PathToMSBuildBinaries, "microsoft.build.tasks.core.dll"));
                 cp.ReferencedAssemblies.Add(Path.Combine(XamlTestHelpers.PathToMSBuildBinaries, "sourcelink.build.framework.dll"));
                 cp.ReferencedAssemblies.Add("System.Data.dll");
@@ -491,7 +491,7 @@ namespace Microsoft.Build.UnitTests.XamlTaskFactory_Tests
                 // Add an assembly reference.
                 cp.ReferencedAssemblies.Add("System.dll");
                 cp.ReferencedAssemblies.Add("System.XML.dll");
-                cp.ReferencedAssemblies.Add(Path.Combine(XamlTestHelpers.PathToMSBuildBinaries, "microsoft.build.utilities.core.dll"));
+                cp.ReferencedAssemblies.Add(Path.Combine(XamlTestHelpers.PathToMSBuildBinaries, "sourcelink.build.utilities.core.dll"));
                 cp.ReferencedAssemblies.Add(Path.Combine(XamlTestHelpers.PathToMSBuildBinaries, "microsoft.build.tasks.core.dll"));
                 cp.ReferencedAssemblies.Add(Path.Combine(XamlTestHelpers.PathToMSBuildBinaries, "sourcelink.build.framework.dll"));
                 cp.ReferencedAssemblies.Add("System.Data.dll");

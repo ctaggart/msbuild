@@ -2034,7 +2034,7 @@ namespace TestTask
                 csc.BuildEngine = new MockEngine();
                 csc.Sources = new ITaskItem[] { new TaskItem(codeFile) };
                 csc.OutputAssembly = new TaskItem(outputFile);
-                csc.References = new ITaskItem[] { new TaskItem("SourceLink.Build.Framework.dll"), new TaskItem("Microsoft.Build.Utilities.Core.dll") };
+                csc.References = new ITaskItem[] { new TaskItem("SourceLink.Build.Framework.dll"), new TaskItem("SourceLink.Build.Utilities.Core.dll") };
                 csc.Platform = "AnyCPU";
                 csc.TargetType = "Library";
                 csc.Prefer32Bit = false;

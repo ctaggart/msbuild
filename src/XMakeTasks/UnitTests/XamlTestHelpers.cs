@@ -144,7 +144,7 @@ namespace Microsoft.Build.UnitTests
                 cp.ReferencedAssemblies.Add("System.Data.dll");
                 cp.ReferencedAssemblies.Add("System.XML.dll");
                 cp.ReferencedAssemblies.Add(Path.Combine(PathToMSBuildBinaries, "SourceLink.Build.Framework.dll"));
-                cp.ReferencedAssemblies.Add(Path.Combine(PathToMSBuildBinaries, "Microsoft.Build.Utilities.Core.dll"));
+                cp.ReferencedAssemblies.Add(Path.Combine(PathToMSBuildBinaries, "SourceLink.Build.Utilities.Core.dll"));
                 cp.ReferencedAssemblies.Add(Path.Combine(PathToMSBuildBinaries, "Microsoft.Build.Tasks.Core.dll"));
 
                 // Generate an executable instead of 

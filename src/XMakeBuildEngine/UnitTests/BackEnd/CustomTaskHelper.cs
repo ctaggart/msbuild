@@ -31,7 +31,7 @@ namespace Microsoft.Build.UnitTests.BackEnd
         {
             string referenceAssembliesPath = ToolLocationHelper.GetPathToBuildTools(ToolLocationHelper.CurrentToolsVersion);
 
-            string[] referenceAssemblies = new string[] { "System.dll", Path.Combine(referenceAssembliesPath, "SourceLink.Build.Framework.dll"), Path.Combine(referenceAssembliesPath, "Microsoft.Build.Utilities.Core.dll"), Path.Combine(referenceAssembliesPath, "Microsoft.Build.Tasks.Core.dll") };
+            string[] referenceAssemblies = new string[] { "System.dll", Path.Combine(referenceAssembliesPath, "SourceLink.Build.Framework.dll"), Path.Combine(referenceAssembliesPath, "SourceLink.Build.Utilities.Core.dll"), Path.Combine(referenceAssembliesPath, "Microsoft.Build.Tasks.Core.dll") };
             return GetAssemblyForTask(taskContents, referenceAssemblies);
         }
 
