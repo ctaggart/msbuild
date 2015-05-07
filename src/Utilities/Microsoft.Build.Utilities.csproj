@@ -17,6 +17,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DocumentationFile>..\..\bin\Windows_NT\Release\SourceLink.Build.Utilities.Core.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <!-- Source Files -->
